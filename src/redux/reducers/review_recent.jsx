@@ -11,8 +11,8 @@ const getTimeAndDate = val => {
   const dates = parts[0].split('-');
   const date = dates[1] + '/' + dates[2] + '/' + dates[0];
   const times = parts[1].split('.')[0].split(':');
-  const time = (parseInt(times[0]) % 12) + ':'
-             + times[1]
+  const time = (times[0] == "12" ? "12" : (parseInt(times[0]) % 12))
+             + ':' + times[1]
              + (parseInt(times[0]) > 11 ? ' PM' : ' AM');
   return {
     time: time,
@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
     state = action.payload.map(val => ({
       ...val,
       createdAt: getTimeAndDate(val.createdAt)
-    }));
+    })).reverse();
   }
   return state;
 }

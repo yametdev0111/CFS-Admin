@@ -18,7 +18,7 @@ const initialState = [
     color: '#ED7D31'
   }
 ];
-const color = ["#70AD47", "#FFC000", "#ED7D31"]
+const color = ["#ED7D31", "#FFC000", "#70AD47"];
 
 const reducer = (state = initialState, action) => {
   if(action.type === "ReviewDetailEdited"){
