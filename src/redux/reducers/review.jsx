@@ -26,7 +26,7 @@ const initialState = [
 const reducer = (state = initialState, action) => {
   if(action.type === "Review"){
     if(isArray(action.payload) && action.payload.length){
-      state = action.payload.reverse();
+      state = action.payload;
     }
   }
   return state;
