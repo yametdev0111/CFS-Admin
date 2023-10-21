@@ -90,7 +90,7 @@ const AdminPage = () => {
       <p>Average ⭐ Stars:{average}</p>
       <p>Total Reviews: {recent.length}</p>
       <BarChart
-        dataset={review_normal.reverse()}
+        dataset={review_normal}
         yAxis={[ {
           scaleType: 'band',
           dataKey: 'level'
