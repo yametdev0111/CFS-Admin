@@ -10,7 +10,7 @@
     "@mui/lab": "^5.0.0-alpha.134",
     "@mui/material": "^5.13.6",
     "@mui/styled-engine-sc": "^5.14.7",
-    "@mui/x-charts": "^6.0.0-alpha.15",
+    "@mui/x-charts": "^6.0.0-alpha.16",
     "@mui/x-data-grid": "^6.16.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.3.1",

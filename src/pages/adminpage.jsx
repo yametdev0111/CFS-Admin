@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { receive, receiveDetailReview, receiveRecent } from "../redux/actions";
 import './../App.css';
 
-const valueFormatter = value => `${value.toFixed(1)}%`;
+const valueFormatter = value => `${value===null?"0":value.toFixed(1)}%`;
 
 const series = [
   {
@@ -108,7 +108,7 @@ const AdminPage = () => {
       />
       
       <BarChart
-        yAxis={[{ scaleType: 'band', data: title, opposite: true }]}
+        yAxis={[{ scaleType: 'band', data: title }]}
         xAxis={[{
           label: 'Percentage (%)',
           min: 0,
