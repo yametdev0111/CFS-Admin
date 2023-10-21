@@ -69,7 +69,7 @@ const AdminPage = () => {
   useEffect(() => {
     var sum = 0.0;
     review_normal.forEach( ( val, index ) => {
-      sum = sum + val.percentage * (5 - index) / 100;
+      sum = sum + val.percentage * (index + 1) / 100;
     } )
     setAverage(sum.toFixed(1));
   }, [review_normal])
@@ -87,7 +87,7 @@ const AdminPage = () => {
       <p>Average ⭐ Stars:{average}</p>
       <p>Total Reviews: {recent.length}</p>
       <BarChart
-        dataset={review_normal.reverse()}
+        dataset={review_normal}
         yAxis={[ {
           scaleType: 'band',
           dataKey: 'level'
