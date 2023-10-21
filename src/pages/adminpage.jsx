@@ -84,7 +84,7 @@ const AdminPage = () => {
     >
       <h1>Feedback Dashboard</h1>
       <h2>Feedback Review Summary</h2>
-      <p>Averate ⭐Stars:{average}</p>
+      <p>Average ⭐ Stars:{average}</p>
       <p>Total Reviews: {recent.length}</p>
       <BarChart
         dataset={review_normal.reverse()}
