@@ -70,8 +70,9 @@ const AdminPage = () => {
     var sum = 0.0;
     console.log(review_normal);
     review_normal.forEach( ( val, index ) => {
-      sum = sum + val.percentage * (5 - index) / 100;
-      console.log(sum, index, val.percentage);
+      const plus = val.percentage * (5 - index) / 100; 
+      sum = sum + plus;
+      console.log(sum, plus, 5 - index, val.percentage);
     } )
     setAverage(sum.toFixed(1));
   }, [review_normal])
